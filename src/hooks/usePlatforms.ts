@@ -1,10 +1,11 @@
- import useData from "./useData"
+ 
+ import platformSelector from "../data/platformSelector"
 interface Platform{
     id:number
     name:string
     slug:string
 }
 
-const usePlatforms =  () => useData<Platform>('/platforms/lists/parents')
+const usePlatforms =  () =>  ({data:platformSelector, isLoading:false, error:null})
 
 export default usePlatforms
