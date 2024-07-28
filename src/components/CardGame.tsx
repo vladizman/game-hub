@@ -5,7 +5,6 @@ import CardIconList from "./CardIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-crop";
 import Emoji from "./Emoji";
-import LikeGame from "./LikeGame";
 
 interface Props {
   game: Game;
@@ -25,7 +24,6 @@ const CardGame = ({ game }: Props) => {
         <HStack justifyContent={"space-between"} marginBottom={3}>
           <Heading fontSize="2xl">
             {game.name} <Emoji rating={game.rating_top} />{" "}
-            <LikeGame gameId={game.id} />
           </Heading>
         </HStack>
       </CardBody>
